@@ -1,0 +1,20 @@
+{
+  "name": "mi-app-node",
+  "version": "1.0.0",
+  "description": "Aplicación Node.js simple con CI/CD en GitHub Actions",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Estudiante CI/CD",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.1.1"
+  }
+}
