@@ -11,6 +11,9 @@ jobs:
       - name: Obtener código
         uses: actions/checkout@v4
 
+      - name: Mostrar archivos del repositorio
+        run: ls -R
+
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
@@ -24,3 +27,4 @@ jobs:
 
       - name: Desplegar en Render
         run: echo "Despliegue automático simulado a Render"
+
