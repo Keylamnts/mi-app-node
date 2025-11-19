@@ -1,0 +1,33 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Obtener código
+        uses: actions/checkout@v4
+
+      - name: Mostrar archivos del repositorio
+        run: ls -R
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Dar permisos a Jest
+        run: chmod +x node_modules/.bin/jest
+
+      - name: Ejecutar pruebas
+        run: npm test
+
+      - name: Desplegar en Render
+        run: echo "Despliegue automático simulado a Render"
